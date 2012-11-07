@@ -1,0 +1,7 @@
+<%= form_for @picture do |f| %>
+	<%= f.label :url, "URL:" %>
+	<%= f.text_field :url %>
+
+	<%= f.submit %>
+	<%= link_to "or Cancel", pictures_url %>
+<% end %>

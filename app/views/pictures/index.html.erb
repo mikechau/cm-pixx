@@ -1,0 +1,16 @@
+<h1> Codemountain </h1>
+
+<nav>
+	<%= link_to "Index", pictures_url %> | 
+	<%= link_to "Create", new_picture_url %>
+</nav>
+
+<ul>
+	<% @pictures.each do |p| %>
+		<li>
+			<p><%= image_tag p.url, :width => "150" %></p>
+			<p><%= link_to "Edit", edit_picture_url(p.id) %></p>
+			<p><%= link_to "Delete", picture_url(p.id), :method => 'delete' %></p>
+		</li>
+	<% end %>
+</ul>
